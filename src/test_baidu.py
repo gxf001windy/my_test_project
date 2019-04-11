@@ -13,7 +13,7 @@ if __name__ == '__main__':
     dotest = config.putreport # 获取配置文件中需要
     dataname = dotest.split(',')
     now = time.strftime('%Y-%m-%d-%H-%M-%S')
-    filename = config.reportDir + '\\' + now + 'report.html'
+    filename = config.reportDir + '/' + now + 'report.html'
 
     # 定义报告存放路径
     fp = open(filename, 'wb')

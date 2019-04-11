@@ -14,10 +14,10 @@ class Config():
         projectPath = os.path.abspath('..')
 
         # config文件目录
-        configPath = projectPath + "\\" + "config"
+        configPath = projectPath + "/" + "config"
 
         # config.ini文件
-        configFile = configPath + "\\" + "config.ini"
+        configFile = configPath + "/" + "config.ini"
 
         conf = configparser.ConfigParser()
         conf.read(configFile)
@@ -37,7 +37,7 @@ class Log():
 
     def __init__(self):
         configBase = Config()
-        self.logName = configBase.logDir + '\\' + time.strftime('%Y-%m-%d-%H') + '.log'
+        self.logName = configBase.logDir + '/' + time.strftime('%Y-%m-%d-%H') + '.log'
 
     def printConsole(self, level, message):
         # 创建一个log
@@ -367,7 +367,7 @@ class writeDataToCsv():
     def readCsv(self, filename):
         """读取csv文件，以字典形式返回"""
         config = Config()
-        csvPath = config.csvDir + '\\' + filename
+        csvPath = config.csvDir + '/' + filename
         with open(csvPath, 'r') as csvFile:
             read = csv.DictReader(csvFile)
             for row in read:
