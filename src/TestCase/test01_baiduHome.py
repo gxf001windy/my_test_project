@@ -3,6 +3,7 @@ import unittest
 from selenium import webdriver
 from Source.public_method import Method, randomInput
 from Source.baidu_element import QianTai_Element
+from selenium.webdriver.chrome.options import Options
 from Source import public_method
 import time, inspect
 
@@ -12,7 +13,16 @@ class TestProjecName(unittest.TestCase):
     csv_io = randomInput()
 
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        # self.driver = webdriver.Chrome()
+        self.chrome_options = Options()
+        self.chrome_options.add_argument('--no-sandbox')
+        # self.chrome_options.add_argument('--disable-dev-shm-usage')
+        # self.chrome_options.add_argument('--headless')
+        # self.chrome_options.add_argument('blink-settings=imagesEnabled=false')
+        # self.chrome_options.add_argument('--disable-gpu')
+
+
+        self.driver = webdriver.Chrome(chrome_options=self.chrome_options)
         self.driver.maximize_window()
         self.put_log.info("===============浏览器初始化完成===============")
         login_url = 'http://www.baidu.com'   # 输入需要登录的页面
@@ -28,6 +38,7 @@ class TestProjecName(unittest.TestCase):
         element_qt = QianTai_Element()
         commond = Method(self.driver)
         commond.elementExist(*element_qt.search_input)
+        self.put_log.info("Test")
         # commond.elementIsNeedExist(*element_qt.search_input, '1')
         # try:
         # commond.element_is_incloud_value(*element_qt.search_button, '百度', 2)
