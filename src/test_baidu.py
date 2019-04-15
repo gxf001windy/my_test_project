@@ -10,7 +10,7 @@ if __name__ == '__main__':
     config = public_method.Config()
     testunit = unittest.TestSuite()
     """生成HTML测试报告"""
-    dotest = config.putreport # 获取配置文件中需要
+    dotest = config.putreport  # 获取配置文件中需要
     dataname = dotest.split(',')
     now = time.strftime('%Y-%m-%d-%H-%M-%S')
     filename = config.reportDir + '/' + now + 'report.html'
