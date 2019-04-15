@@ -39,10 +39,10 @@ class TestProjecName(unittest.TestCase):
         commond = Method(self.driver)
         commond.elementExist(*element_qt.search_input)
         self.put_log.info("Test")
-        # commond.elementIsNeedExist(*element_qt.search_input, '1')
+        commond.elementIsNeedExist(*element_qt.search_input, '1')
         # try:
-        # commond.element_is_incloud_value(*element_qt.search_button, '百度', 2)
+        commond.element_is_incloud_value(*element_qt.search_button, '百度', 2)
         commond.element_is_clickable(*element_qt.search_button,  2)
         # except Exception as e:
         #     print(e)
-        pass
+        # pass
