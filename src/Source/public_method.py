@@ -11,7 +11,7 @@ class Config():
     def __init__(self):
         """根据工程目录获取config文件路径"""
         # 获取项目目录
-        projectPath = os.path.abspath('..')
+        projectPath = os.path.abspath('.')
         print(projectPath)
 
         # config文件目录
