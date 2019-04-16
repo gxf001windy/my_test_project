@@ -29,11 +29,11 @@ class Config():
         # self.csvDir = os.path.join(projectPath, conf.get('base', 'csvDir'))  # csv配置文件路径
         # self.testDir = os.path.join(projectPath, conf.get('base', 'testDir'))  # 测试用例文件路径
         # self.sendMsg = conf.get('base', 'sentMsg') # 消息推送开关=1推送
-        self.logDir = os.path.join(projectPath, "log")  # 日志输出路径
-        self.screenDir = os.path.join(projectPath, 'screen')  # 截图输出路径
-        self.reportDir = os.path.join(projectPath, 'report')  # 测试报告输出路径
-        self.csvDir = os.path.join(projectPath, 'csv')  # csv配置文件路径
-        self.testDir = os.path.join(projectPath, 'src/TestCase')  # 测试用例文件路径
+        self.logDir = projectPath + "/" + 'log'  # 日志输出路径
+        self.screenDir = projectPath + "/" + 'screen'  # 截图输出路径
+        self.reportDir = projectPath + "/" + 'report'  # 测试报告输出路径
+        self.csvDir = projectPath + "/" + 'csv'  # csv配置文件路径
+        self.testDir = projectPath + "/" + 'src/TestCase'  # 测试用例文件路径
         self.sendMsg = '1'  # 消息推送开关=1推送
 
         # self.putreport = conf.get('sec_report', 'put_report')
