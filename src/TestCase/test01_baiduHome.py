@@ -16,8 +16,8 @@ class TestProjecName(unittest.TestCase):
         # self.driver = webdriver.Chrome()
         self.chrome_options = Options()
         self.chrome_options.add_argument('--no-sandbox')
-        # self.chrome_options.add_argument('--disable-dev-shm-usage')
-        # self.chrome_options.add_argument('--headless')
+        self.chrome_options.add_argument('--disable-dev-shm-usage')
+        self.chrome_options.add_argument('--headless')
         # self.chrome_options.add_argument('blink-settings=imagesEnabled=false')
         # self.chrome_options.add_argument('--disable-gpu')
 
