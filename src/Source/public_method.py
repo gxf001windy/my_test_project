@@ -34,9 +34,10 @@ class Config():
         self.reportDir = os.path.join(projectPath, 'report')  # 测试报告输出路径
         self.csvDir = os.path.join(projectPath, 'csv')  # csv配置文件路径
         self.testDir = os.path.join(projectPath, 'src/TestCase')  # 测试用例文件路径
-        self.sendMsg = conf.get('base', 'sentMsg')  # 消息推送开关=1推送
+        self.sendMsg = '1'  # 消息推送开关=1推送
 
-        self.putreport = conf.get('sec_report', 'put_report')
+        # self.putreport = conf.get('sec_report', 'put_report')
+        self.putreport = 'test*.py'
 
 class Log():
     """日志模块，在log路径下生成log文件，以小时分割。同时控制台也会打印"""
